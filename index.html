@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Tools — local, one-command tools for messy work</title>
+<meta name="description" content="Small local tools for contract comparison, invoice extraction, podcast cleanup, and AI code review. No uploads. No subscriptions. Real sample runs.">
+<style>
+  :root {
+    --paper: #f6f3eb;
+    --ink: #1b2c3b;
+    --muted: #5b6b78;
+    --line: #d8d2c2;
+    --accent: #356659;
+    --accent-soft: #e3efe9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+  header { padding: 88px 0 52px; border-bottom: 1px solid var(--line); }
+  .mark {
+    font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin-bottom: 28px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+    max-width: 15ch;
+  }
+  .lede {
+    font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0;
+  }
+  main { padding: 56px 0 20px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #fffdf8;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 26px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+  }
+  .card.live { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+  .status {
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 18px;
+  }
+  .live .status { color: var(--accent); font-weight: 700; }
+  .card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em;
+  }
+  .card p { color: var(--muted); font-size: 15px; margin: 0 0 22px; flex: 1; }
+  .meta {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 14px; border-top: 1px solid var(--line); padding-top: 16px;
+  }
+  .price { font-weight: 700; font-size: 17px; }
+  .meta a, .meta span.soon {
+    font-size: 14px; font-weight: 600; text-decoration: none; color: var(--accent);
+  }
+  .meta span.soon { color: var(--muted); font-weight: 500; }
+  .meta a:hover { text-decoration: underline; }
+  .note {
+    margin: 46px 0 0; padding: 22px 24px;
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    font-size: 15px; color: var(--ink);
+  }
+  .note strong { font-weight: 700; }
+  section.why { padding: 72px 0 56px; border-top: 1px solid var(--line); margin-top: 64px; }
+  section.why h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px; margin: 0 0 28px; letter-spacing: -0.01em;
+  }
+  .points {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px;
+  }
+  .points h3 { font-size: 15px; margin: 0 0 8px; }
+  .points p { font-size: 14px; color: var(--muted); margin: 0; }
+  footer {
+    border-top: 1px solid var(--line); padding: 28px 0 48px;
+    font-size: 13px; color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: space-between;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    header { padding: 56px 0 40px; }
+    .wrap { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">Small Tools</div>
+  <h1>Tools for the work nobody wants to do.</h1>
+  <p class="lede">Local. One command. No subscription. Every tool ships with a real sample run you can reproduce — not a screenshot and a promise.</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <article class="card live">
+      <div class="status">Available now</div>
+      <h2>12 Checks Before You Merge AI Code</h2>
+      <p>A 26-page field guide for anyone merging AI-written code. Twelve checks, each with a 10-second test, a copy-paste command for PowerShell and bash, and a before/after example.</p>
+      <div class="meta">
+        <span class="price">$9</span>
+        <a href="https://9624691634861.gumroad.com/l/ndbrmel">Buy on Gumroad &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="status">In build &middot; ships this week</div>
+      <h2>Change Receipt</h2>
+      <p>Turn a git diff into a client-ready proof report: changed lines, line coverage, mutation spot-checks, risk flags, and one honest verdict — PASS, REVIEW, or BLOCK.</p>
+      <div class="meta">
+        <span class="price">$79</span>
+        <span class="soon">Not on sale yet</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="status">In build &middot; ships this week</div>
+      <h2>ContractDiff</h2>
+      <p>See exactly what changed between two contracts, word by word. HTML redline, markdown summary, and JSON. Your documents never leave your machine.</p>
+      <div class="meta">
+        <span class="price">$39</span>
+        <span class="soon">Not on sale yet</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="status">In build &middot; ships this week</div>
+      <h2>DocToGrid</h2>
+      <p>A folder of invoice, statement, and receipt PDFs in. One filterable spreadsheet out. Runs locally; nothing is uploaded. Low-confidence fields are flagged, never guessed.</p>
+      <div class="meta">
+        <span class="price">$39</span>
+        <span class="soon">Not on sale yet</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="status">In build &middot; ships this week</div>
+      <h2>PodcastKit</h2>
+      <p>One recording in. Silence cut, transcript, chapters, ten clip candidates, captions, and show notes out. Local processing; your audio is not uploaded.</p>
+      <div class="meta">
+        <span class="price">$49</span>
+        <span class="soon">Not on sale yet</span>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="note"><strong>The shelf grows this week.</strong> The four tools marked “in build” are being finished and tested now. Each one goes on sale only after it has a real sample run and a build receipt — the same standard as the guide above.</p>
+
+  <section class="why">
+    <h2>Why so small?</h2>
+    <div class="points">
+      <div>
+        <h3>One job per tool</h3>
+        <p>No dashboard, no seats, no onboarding call. You run one command and get one result you can use.</p>
+      </div>
+      <div>
+        <h3>Local by default</h3>
+        <p>Contracts, invoices, and recordings don’t leave your machine. No account, no upload, no cloud queue.</p>
+      </div>
+      <div>
+        <h3>Limits on the page</h3>
+        <p>If a tool can’t do something, it says so before you pay. A tool that hides its limits is a tool you can’t trust.</p>
+      </div>
+      <div>
+        <h3>7-day refund</h3>
+        <p>No questions, no forms. Reply to your Gumroad receipt and it gets refunded.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Built by an independent studio. Support: reply to your Gumroad receipt.</span>
+  <a href="https://9624691634861.gumroad.com">All products on Gumroad &rarr;</a>
+</footer>
+
+</div>
+</body>
+</html>
